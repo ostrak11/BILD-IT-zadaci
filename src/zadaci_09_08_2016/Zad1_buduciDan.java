@@ -38,6 +38,7 @@ public class Zad1_buduciDan {
 		
 		int dan=0;
 		
+		//unos dana uz provjeru o tacnosti unosa (tip podataka)
 		while(nesto==true){
 			try {
 				dan=unos.nextInt();
@@ -49,6 +50,7 @@ public class Zad1_buduciDan {
 			}
 		}
 		
+		//provjera unosa u vidu granica unesenih brojeva
 		while(isGood(dan)==false){
 			System.out.println("Unesite broj od 0 do 6");
 			dan=unos.nextInt();
@@ -59,7 +61,7 @@ public class Zad1_buduciDan {
 		System.out.println("Unesite broj dana nakon današnjeg dana: ");
 		
 		int dan2=0;
-		
+		//unos dana uz provjeru o tacnosti unosa (tip podataka)
 		while(nes==true){
 			try {
 				dan2=unos.nextInt();
@@ -71,8 +73,9 @@ public class Zad1_buduciDan {
 			}
 		}
 		
+		//ispis rezultata
 		System.out.println("Današnji dan je "+ danU7(dan)+".");
-		System.out.println("Dan u budućnosti koji zelite znati je "+ danU7(dan2%7)+"." );
+		System.out.println("Dan u budućnosti koji zelite znati je "+ danU7((dan +dan2)%7)+"." );
 	
 		unos.close();
 	}
