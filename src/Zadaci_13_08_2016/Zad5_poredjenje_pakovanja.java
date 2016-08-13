@@ -52,10 +52,9 @@ import java.util.Scanner;
 		System.out.println("Unesite cijenu drugog pakovanja: ");
 		double km2=provjera();
 		
-		//svodimo na zajednici broj kg(kolicina 1*kolicina druog i to je isto)
-		//poredimo samo cijene tako sto cijenu jednog pomnozimo sa kolicinom drugog i obrnuto
-		//na kraju ih uporedimo i onaj samanjom ukupnom cijenom je jeftiniji tj povoljniji
-		if((km1*gram2)<(km2*gram1)){
+		
+		//na kraju ih uporedimo i onaj sa manjom ukupnom cijenom je jeftiniji tj povoljniji
+		if((km1/gram1)<(km2/gram2)){
 			System.out.println("Prvo pakovanje je povoljnije!!!");
 		}else{
 			System.out.println("Drugo pakovanje je povoljnije!!!");

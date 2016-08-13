@@ -71,7 +71,7 @@ public class Zad2_djelilac_min_max {
 		System.out.println("Najmanji zajednički djelilac brojeva " + broj1 + " i " + broj2 + " je: " + min);
 		System.out.println("Najveci zajednički djelilac brojeva " + broj1 + " i " + broj2 + " je: " + max);
 	
-		
+		unos.close();
 		
 	}
 

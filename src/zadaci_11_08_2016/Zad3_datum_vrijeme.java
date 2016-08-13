@@ -14,7 +14,7 @@ public class Zad3_datum_vrijeme {
 		String[] months = {"januar","februar","mart","april","maj","juni","juli","avgust","septembar","oktobar","novembar","decembar"};
 		String datum = "";	
 		
-		//istanca kalendara
+		//instanca kalendara
 		Calendar date = Calendar.getInstance();
 		//setanje datuma
 		date.setTimeInMillis(millis);	
@@ -30,8 +30,12 @@ public class Zad3_datum_vrijeme {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		
 		Date time = new Date();
+		//format vremena
 		String newTime = new SimpleDateFormat("HH:mm:ss").format(time);
+		
+		//ispis uz pozivanje metoda za datum i vrijeme
 		System.out.println("Trenutni datum i vrijeme: " + getDatum(System.currentTimeMillis())+" "+ newTime.toString());
 
 		

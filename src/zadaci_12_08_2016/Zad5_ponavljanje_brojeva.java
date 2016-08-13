@@ -11,6 +11,7 @@ public class Zad5_ponavljanje_brojeva {
 
 	static Scanner unos=  new Scanner(System.in);
 	
+	//metoda ispituje tacnost unosa podataka
 	public static int provjera() {
 		
 		int broj = 0;	
@@ -37,10 +38,12 @@ public class Zad5_ponavljanje_brojeva {
 
 		int[] niz = new int[100];
 		
-		
+			//unosimo elemente u niz sve kod je unos razlicit od nule
 			System.out.println("Unesite elemente niza, nula prekida unos:");
 			for (int i=0; i<100; i++){
 				int broj=provjera();
+				
+				//unos predstavljaju index od 1 do 100, svaki put kad se unese broj poveca se broj na njegovom indexu u okviru niza
 				if((broj!=0)&&(broj<=100)&&(broj>0)){
 					niz[broj]++;
 				}else{
@@ -48,12 +51,13 @@ public class Zad5_ponavljanje_brojeva {
 				}
 			}
 		
+			//ispis rezultata gdje index predstavlja broj, a njegovo vrijednost iz niza broj ponavljanja
 			for (int i=1; i<niz.length;i++){
 				if(niz[i]!=0){
 					System.out.println("Broj " + i+ " se ponavlja " + niz[i] + " puta.");
 				}
 			}
 		
-	
+	unos.close();
 	}
 }

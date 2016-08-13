@@ -82,7 +82,7 @@ public class Zad4_rastuci_niz {
 		System.out.println();
 		rastuciNiz(niz[0],niz[1],niz[2]);	
 		
-	
+	unos.close();
 	}
 	
 
