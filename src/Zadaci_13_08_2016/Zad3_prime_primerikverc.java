@@ -34,6 +34,14 @@ public class Zad3_prime_primerikverc {
 	    return reverse;
 		
 	}
+	
+	public static boolean isPalindrome(int broj){
+		if(broj==reverse(broj)){
+			return true;
+		}
+		return false;
+	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -42,7 +50,7 @@ public class Zad3_prime_primerikverc {
 		
 		do{
 			//provjeravamo da li je broj prost i da li je njegov obrnuti broj prost
-			if((isProst(i))&&(isProst(reverse(i)))){
+			if(((isProst(i))&&(isProst(reverse(i))&&(!isPalindrome(i))))){
 				//brojac za ispis u nobi red
 				brojac++;
 				System.out.print(i + " " + reverse(i)+" ");
