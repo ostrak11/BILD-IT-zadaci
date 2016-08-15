@@ -37,8 +37,8 @@ public class Zad5_matica_nxn {
 
 	 public static void printMatrix(int n){
 		 
-		 
-		 for(int i=0; i<n; i++){
+		 //generisanje brojeva
+		  for(int i=0; i<n; i++){
 			 for(int j=0; j<n;j++){
 				 System.out.print((int)(Math.random()*2)+" ");
 			 }
@@ -49,11 +49,13 @@ public class Zad5_matica_nxn {
 	 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		//unos dimenzija matrice i pozivanje metode za print
 		System.out.println("Unesite dimanziju matice: ");
 		int n=provjera();
 		
 		printMatrix(n);
+		
+		unos.close();
 	}
 
 }
