@@ -90,7 +90,7 @@ public class Zad2_Credit_Card {
 
 	/** Return true if the digit d is a prefix for number */
 	public static boolean prefixMatched(long number, int d) {
-		// provjerava tacnost prefixa 
+		// provjerava podudarnost prefixa sa brojem
 		if (getPrefix(number, getSize((long) d)) == d) {
 			return true;
 		}
@@ -115,10 +115,10 @@ public class Zad2_Credit_Card {
 	 * Return the first k number of digits from number. If the number of digits
 	 * in number is less than k, return number.
 	 */
-	//uzima kao argumet broj i broj mjesta koji zauzima prefix i vraca prefix
+	// uzima kao argumet broj i broj mjesta koji zauzima prefix i vraca prefix
 	public static long getPrefix(long number, int k) {
 		if (getSize(number) >= k) {
-			// number goes until argument that is prefix
+
 			int broj = getSize(number) - k;
 			for (int i = 0; i < broj; i++) {
 				number /= 10;
@@ -127,7 +127,8 @@ public class Zad2_Credit_Card {
 		return number;
 
 	}
-	//provjera unosa broja
+
+	// provjera unosa broja uz ponovan unos prilikom greske
 	public static long checkIn() {
 
 		long num = 0;
@@ -151,21 +152,21 @@ public class Zad2_Credit_Card {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// unos i provjera unosa broja
 		System.out.println("Enter a credit card number as a long integer: ");
 		long number = checkIn();
-		/*	// if number is valid or starts with one of the digits in column
+
+		// provjera da li je broj validan(broj cifara, suma djeljiva sa 10) i
+		// provjera podudarnosti prefixa sa prefixima kreditnih kartica i u
+		// zavisnosti od toga vraca rezultat
 		if (isValid(number)
 				&& (prefixMatched(number, 4) || prefixMatched(number, 5)
-						|| prefixMatched(number, 37) || prefixMatched(number, 6))) {
+						|| prefixMatched(number, 6) || prefixMatched(number, 37))) {
 			System.out.println(number + " is valid");
 
 		} else
-			System.out.println(number + " is invalid");*/
-		
-		
-		
-		System.out.println(prefixMatched(number, 3));
-		System.out.println(getPrefix(number, 2));
+			System.out.println(number + " is invalid");
+
 	}
 
 }
