@@ -10,13 +10,13 @@ public class Zad5_brojacslova {
 	public static int countLetters(String s){
 		
 		int brojac=0;
-		
+		//povecava brojac ako je u stringu karakter slovo
 		for (int i=0; i<s.length();i++){
 			if(Character.isLetter(s.charAt(i))){
 				brojac++;
 			}
 		}
-		
+		//vraca brojac
 		return brojac;
 		
 		
@@ -27,13 +27,13 @@ public class Zad5_brojacslova {
 		// TODO Auto-generated method stub
 
 		Scanner unos = new Scanner(System.in);
-		
+		//unos stringa
 		System.out.print("Unesite neki string:");
+		String s= unos.nextLine();
 		
-			String s= unos.nextLine();
+		unos.close();
 		
-			unos.close();
-		
+		//pozivanje metode i ispis dobivenog rezultata
 		System.out.println("Vas string '"+s+"' sadrzi "+countLetters(s)+" slova.");
 	}
 

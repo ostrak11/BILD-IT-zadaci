@@ -33,10 +33,10 @@ public class Zad1_dana_u_godini {
 		
 		boolean nesto=true;
 		boolean nas=true;
-		int temp;
 		int pocetna=0;
 		int kraj=0;
 		
+		//unos godine, provjera tacnosti unosa
 		while(nesto){
 			System.out.println("Unesite pocetnu godinu: ");
 			try {
@@ -49,7 +49,7 @@ public class Zad1_dana_u_godini {
 			}
 		}
 		
-
+		//unos godine, provjera tacnosti unosa
 		while(nas){
 			System.out.println("Unesite krajnju godinu: ");
 			try {
@@ -62,7 +62,7 @@ public class Zad1_dana_u_godini {
 			}
 		}
 		
-		
+		//ispis rezultata zavisnosti od unosa
 		if(pocetna<kraj){
 			
 			System.out.println("Ispis godina sa brojem dana: ");

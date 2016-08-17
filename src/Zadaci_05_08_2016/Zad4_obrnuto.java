@@ -14,6 +14,7 @@ public class Zad4_obrnuto {
 		
 		System.out.println("Unesite 10 cijelih brojeva, nakon svakog unosa pritisnite tipku 'ENTER' ");
 			try {
+				//unos elemenata u niz
 				for(int i=0;i<niz.length;i++){
 				niz[i]=unos.nextInt();
 				}
@@ -25,6 +26,7 @@ public class Zad4_obrnuto {
 				unos.close();
 			}
 		
+			//ispis obrnutog redoslijeda
 		System.out.println("Ispis obrnutog redoslijeda unesenih brojeva");
 		for (int i=niz.length-1;i>=0;i--){
 			System.out.print(niz[i] + " ");
