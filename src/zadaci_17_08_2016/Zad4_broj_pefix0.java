@@ -35,6 +35,7 @@ public class Zad4_broj_pefix0 {
 	}
 	public static String format(int number, int width){
 		
+		//ispis broj u određenom formatu
 		String s = String.format("%0" + width + "d", number);
 
 		return s;
@@ -45,12 +46,14 @@ public class Zad4_broj_pefix0 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		//unos broja i sirine
 		System.out.println("Unesite broj: ");
 		int broj =provjera();
 		
 		System.out.println("Unesite širinu broja: ");
 		int sirina =provjera();
 		
+		//poziv metode i ispis
 		System.out.println(format(broj,sirina));
 		unos.close();
 	}
