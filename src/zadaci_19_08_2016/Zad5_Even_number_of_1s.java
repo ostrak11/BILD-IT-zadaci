@@ -7,16 +7,16 @@ public class Zad5_Even_number_of_1s {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		int [][]matrix= new int[6][6];
 		
+		//generisanje matrice
 		for(int i=0; i<matrix.length;i++){
 			for(int j=0; j<matrix[0].length; j++){
 				matrix[i][j]= (int)(Math.random()*2);
 				
 			}
 		}
-		
+		//printanje i ispis rezultata
 		printMatrix(matrix);
 		
 		System.out.println("Svaki red ima paran broj 1s?? " +(isRedovi(matrix)));
@@ -36,6 +36,7 @@ public class Zad5_Even_number_of_1s {
 	}
 	
 	public static boolean isRedovi(int[][] m) {
+		//prolaz kroz matricu, brojac predstavlja broj jedinica u redu, ako je djeljiv sa 2 u svakom redu metoda vraca true 
 		int brojac = 0;
 		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[i].length; j++) {
@@ -49,6 +50,7 @@ public class Zad5_Even_number_of_1s {
 	}
 	
 	public static boolean isKolona(int[][] m) {
+		//prolaz kroz matricu, brojac predstavlja broj jedinica u koloni, ako je djeljiv sa 2 u svakoj kolonimetoda vraca true 
 		int brojac = 0;
 		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[i].length; j++) {
