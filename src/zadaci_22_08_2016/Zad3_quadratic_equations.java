@@ -24,7 +24,7 @@ public class Zad3_quadratic_equations {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		
+		//unos
 		System.out.println("Unesite koeficijent a: ");
 		int a=provjera();
 		
@@ -36,6 +36,7 @@ public class Zad3_quadratic_equations {
 		
 		QuadraticEquation test1= new QuadraticEquation(a,b,c);
 		
+		//ipsis rezultata zavisno o diskriminanti
 		if(test1.getDiscriminant()>0){
 			System.out.println("Prvi korijen jednacine je: " + test1.getRoot1());
 			System.out.println("Drugi korijen jednacine je: " + test1.getRoot2());
@@ -48,6 +49,8 @@ public class Zad3_quadratic_equations {
 		
 	}
 
+	
+	//provjer unosa podataka
 	public static int provjera() {
 
 		int broj = 0;
@@ -75,20 +78,24 @@ public class Zad3_quadratic_equations {
 
 class QuadraticEquation{
 	
+	//varijable
 	private int a;
 	private int b;
 	private int c;
 	
+	//kontruktor
 	QuadraticEquation(int a, int b, int c){
 		this.a=a;
 		this.b=b;
 		this.c=c;
 	}
 	
+	//metoda koja vraca diskriminantu
 	double getDiscriminant(){
 		return b*b-(4*a*c);
 	}
 	
+	//metode za izračunavanje korijena
 	double getRoot1(){
 		if(getDiscriminant()<0){
 			return 0;

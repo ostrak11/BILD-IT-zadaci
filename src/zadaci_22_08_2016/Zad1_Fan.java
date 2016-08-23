@@ -20,9 +20,11 @@ public class Zad1_Fan {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		//kreiranje objekata
 		Fan fan1= new Fan();
 		Fan fan2= new Fan();
 		
+		//dodjeljivanje svojstava objektima
 		fan1.setSpeed(3);
 		fan1.setRadius(10);
 		fan1.setColor("yellow");
@@ -33,6 +35,8 @@ public class Zad1_Fan {
 		fan2.setColor("blue");
 		fan2.setOn(false);
 		
+		
+		//ispis
 		System.out.println("Karakteristike objekta fan1: "+ fan1.toString());
 		System.out.println("Karakteristike objekta fan2: "+ fan2.toString());
 		
@@ -41,7 +45,7 @@ public class Zad1_Fan {
 }
 
 class Fan{
-	//
+	//kreiranje varijabli
 	final int SLOW=1;
 	final int MEDIUM=2;
 	final int HIGH =3;
@@ -51,12 +55,17 @@ class Fan{
 	private double radius=5;
 	String color= "blue";
 	
+	//geteri seter metode
 	public int getSpeed() {
 		return speed;
 	}
 
-	public void setSpeed(int speed) {
-		this.speed = speed;
+	public void setSpeed(int newspeed) {
+		if(newspeed!=1 || newspeed!=2 || newspeed!=3){
+			System.out.println("Morate unijeti vrijednosti 1, 2 ili 3!!!");
+		}else{
+				speed=newspeed;
+		}
 	}
 	
 	public boolean getOn() {
@@ -71,8 +80,13 @@ class Fan{
 		return radius;
 	}
 
-	public void setRadius(double radius) {
-		this.radius = radius;
+	public void setRadius(double newradius) {
+		 if(newradius < 0){
+	            System.out.println("Radius mora biti veci od 0!!!!");
+		 }else {
+			 radius = newradius;
+		}
+		
 	}
 	
 	public String getColor() {
@@ -83,6 +97,7 @@ class Fan{
 		this.color = color;
 	}
 	
+	//defoltni konstruktor
 	Fan(){
 		 speed=SLOW;
 		 on=false;
@@ -90,6 +105,7 @@ class Fan{
 		 color= "blue";
 	}
 	
+	//metoda tostring
 	public String toString(){
 		if(getOn()){
 			return "Fan speed is: " + getSpeed() +

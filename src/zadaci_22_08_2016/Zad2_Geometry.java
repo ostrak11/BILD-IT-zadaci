@@ -24,10 +24,13 @@ public class Zad2_Geometry {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		//kreiranje objekarta sa svojstvima
 		RegularPolygon poly0 = new RegularPolygon();
 		RegularPolygon poly1 = new RegularPolygon(6,4);
 		RegularPolygon poly2 = new RegularPolygon(10, 4 ,5.6, 7.8);
 		
+		
+		//ispis rezultata
 		System.out.println("Perimeter for object polyO is " +poly0.getPerimeter()+ " and area is: "+ poly0.getArea());
 		System.out.println("Perimeter for object poly1 is " +poly1.getPerimeter()+ " and area is: "+ poly1.getArea());
 		System.out.println("Perimeter for object poly2 is " +poly2.getPerimeter()+ " and area is: "+ poly2.getArea());
@@ -37,11 +40,13 @@ public class Zad2_Geometry {
 
 class RegularPolygon{
 	
+	//varijable
 	private int n=3;
 	private double side=1;
 	private double x=0;
 	private double y=0;
 	
+	//konstruktori za kreiranje objekata, sa određenim varijablama
 	RegularPolygon(){
 		n=3;
 		side=1;
@@ -63,6 +68,7 @@ class RegularPolygon{
 		this.y=y;
 	}
 	
+	//getter i setter metode
 	public int getN() {
 		return n;
 	}
@@ -95,10 +101,12 @@ class RegularPolygon{
 		this.y = y;
 	}
 	
+	//metoda za obim
 	double getPerimeter(){
 		return side*n;
 	}
 	
+	//metoda za povrsinu
 	double getArea(){
 		return (n*side*side)/(4*(Math.tan(Math.PI/n)));
 	}

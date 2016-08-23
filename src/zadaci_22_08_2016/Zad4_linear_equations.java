@@ -25,6 +25,7 @@ public class Zad4_linear_equations {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		//unos koeficijenata
 		System.out.println("Unesite koeficijent a: ");
 		double a=provjera();
 		
@@ -43,8 +44,10 @@ public class Zad4_linear_equations {
 		System.out.println("Unesite koeficijent f: ");
 		double f=provjera();
 		
+		//kreiranje objekta
 		LinearEquation equ= new LinearEquation(a,b,c,d,e,f);
 		
+		//ispis rezultata 
 		if (equ.isSolvable()){
 			System.out.println("Rijesenje je... x=" + equ.getX()+ " i y=" + equ.getY());
 		}else{
@@ -81,7 +84,7 @@ public class Zad4_linear_equations {
 
 class LinearEquation{
 	
-	
+	//varijable
 	private double a;
 	private double b;
 	private double c;
@@ -89,6 +92,7 @@ class LinearEquation{
 	private double e;
 	private double f;
 	
+	//kontruktor
 	LinearEquation(double a,double b,double c,double d,double e,double f){
 		this.a=a;
 		this.b=b;
@@ -98,6 +102,7 @@ class LinearEquation{
 		this.f=f;
 	}
 	
+	//getter metode
 	public double getA() {
 		return a;
 	}
@@ -122,6 +127,7 @@ class LinearEquation{
 		return f;
 	}
 	
+	//metoda koja vraca da li je moguce rijesiti jednacine
 	boolean isSolvable(){
 		if ((a*d)-(b*c)==0){
 			return false;
@@ -130,6 +136,7 @@ class LinearEquation{
 		}
 	}
 	
+	//metode koje vracaju rjesenje jednacine x i y
 	double getX(){
 		return ((e*d)-(b*f))/((a*d)-(b*c));
 		
@@ -139,6 +146,7 @@ class LinearEquation{
 		return ((a*f)-(e*c))/((a*d)-(b*c));
 	}
 	
+	//metoda koja vraca novi objekat na osnovu unesenih koordinata
 	public static LinearEquation getIntersectingPoint(double x1, double y1, double x2, double y2, double x3, double y3,	double x4, double y4) {
 		double a = (y1 - y2);
 		double b = (-x1 + x2);
