@@ -25,12 +25,11 @@ public class Zad5_IllegalArgumentException {
 		private double loanAmount; 
 		private java.util.Date loanDate; 
 		
-		//Default constructor 
+		//konstruktori
 		Loan() { 
 			this(2.5, 1, 1000); 
 			} 
-		
-		 // Construct a loan with specified annual interest rate, number of years, and loan amount  
+		 
 		Loan(double annualInterestRate, int numberOfYears,  double loanAmount) { 
 			
 			if (annualInterestRate<=0){
@@ -48,52 +47,52 @@ public class Zad5_IllegalArgumentException {
 			loanDate = new java.util.Date();     
 			}
 		
-		 // Return annualInterestRate   
+		 // vraca kamatnu stopu
 		public double getAnnualInterestRate() {  
 			return annualInterestRate; 
 			} 
-		// Set a new annualInterestRate  
+		// postavi godišnju kamatnu stopu
 		public void setAnnualInterestRate(double annualInterestRate) {  
 			if (annualInterestRate<=0){
 				throw new IllegalArgumentException("Ilegal Argument Exception.");
 			}
 			this.annualInterestRate = annualInterestRate;
 			} 
-		// Return numberOfYears  
+		// vraca broj godina
 		public int getNumberOfYears() { 
 			return numberOfYears; 
 			} 
-		// Set a new numberOfYears  
+		// postavi broj godina 
 		public void setNumberOfYears(int numberOfYears) { 
 			if (numberOfYears<=0){
 				throw new IllegalArgumentException("Ilegal Argument Exception.");
 			}
 			this.numberOfYears = numberOfYears;     
 			} 
-		// Return loanAmount  
+		// metoda vraca velicinu zajma
 		public double getLoanAmount() {  
 			return loanAmount; 
 			} 
-		 // Set a new loanAmount  
+		 // postavi visinu zajma
 		public void setLoanAmount(double loanAmount) { 
 			if (loanAmount <= 0){
 		         throw new IllegalArgumentException("Ilegal Argument Exception.");
 				}
 			this.loanAmount = loanAmount; 
 			} 
-		// Find monthly payment 
+		// mjesecna naknada
 		public double getMonthlyPayment() { 
 			double monthlyInterestRate = annualInterestRate / 1200; 
 			double monthlyPayment = loanAmount * monthlyInterestRate / (1 - (1 / Math.pow(1 + monthlyInterestRate, numberOfYears * 12))); 
 			return monthlyPayment; 
 			} 
 		
-		// Find total payment  
+		// ukupno plaćanje
 		public double getTotalPayment() { 
 			double totalPayment = getMonthlyPayment() * numberOfYears * 12; 
 			return totalPayment; 
 			} 
-		// Return loan date  
+		// datum pozajmljivanja 
 		public java.util.Date getLoanDate() { 
 			return loanDate; 
 			}
